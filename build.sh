@@ -1,0 +1,1 @@
+gradle clean && gradle build
