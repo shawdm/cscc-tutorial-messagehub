@@ -20,11 +20,11 @@
 apply plugin: 'java'
 apply plugin: 'application'
 
-mainClassName = 'com.ibm.ccc.annotate.Annotator'
+mainClassName = 'com.ibm.cscc.tutorial.Producer'
 sourceCompatibility = 1.7
 targetCompatibility = 1.7
 version = '0.1'
-jar.baseName = 'cscc-tutorial-messagehub'
+jar.baseName = 'cscc-tutorial-messagehub-producer'
 
 repositories {
     mavenCentral()

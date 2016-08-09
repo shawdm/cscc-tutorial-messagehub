@@ -1,7 +1,13 @@
+.DS_Store
+
 .gradle
 .vagrant
 bin
 build
 lib/*
-local.env
-.DS_Store
+resources/jaas.conf
+
+
+local-consumer-1.env
+local-consumer-2.env
+local-producer.env
