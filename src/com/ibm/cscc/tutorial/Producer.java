@@ -112,8 +112,7 @@ public class Producer extends MessageHub{
 
 	public void start() {
 		String topic = properties.getProperty("cscc.topic");
-		
-		
+	
 		while(running){
 			try {
 				Date now = new Date();
