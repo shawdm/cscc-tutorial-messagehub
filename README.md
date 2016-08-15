@@ -97,13 +97,14 @@ When creating a topic, you need to specify two properties: the maximum time peri
 
 ### Building and running examples
 The code can be built from a script if your development machine has Java 7, Maven and Gradle installed.  If not, it can be built from a virtual machine using the Vagrant file.
-    ./build.sh
+
+        ./build.sh
 
 
 ### Single Consumer Example
 
-    ./start-producer.sh
-    ./start-consumer-1.sh
+        ./start-producer.sh
+        ./start-consumer-1.sh
 
 Message Hub acts as buffer with the producer and consumer decoupled.  The consumer will process the data as quickly as it can, but wont be overloaded with input data.  The consumer can disconnect and it will get data from where it left off (last commit).
 
@@ -112,9 +113,9 @@ Message Hub acts as buffer with the producer and consumer decoupled.  The consum
 * Set each consumer to have a unique client ID
 * Set each consumer to have a unique consumer group name
 
-    ./start-producer.sh
-    ./start-consumer-1.sh
-    ./start-consumer-2.sh
+        ./start-producer.sh
+        ./start-consumer-1.sh
+        ./start-consumer-2.sh
 
 Message Hub working on publish-subscribe model.  Each consumer gets all the messages.  If one disconnects and reconnects it will carry on from where it left off.
 
@@ -123,9 +124,9 @@ Message Hub working on publish-subscribe model.  Each consumer gets all the mess
 * Set each consumer to have a unique client ID
 * Set each consumer to have the same consumer group name
 
-    ./start-producer.sh
-    ./start-consumer-1.sh
-    ./start-consumer-2.sh
+        ./start-producer.sh
+        ./start-consumer-1.sh
+        ./start-consumer-2.sh
 
 Message Hub delivers each message to just one instance in a given consumer group.  This can be used for load balancing.  Default behavior is round-robin, but can be defined through the API.
 
@@ -137,9 +138,9 @@ Must have at least as many partitions as there are consumer groups to load balan
 * Leave consumer-2 with its existing consumer group name
 * Set auto.offset.reset Kafka property to earliest
 
-    ./start-producer.sh
-    ./start-consumer-1.sh
-    ./start-consumer-1.sh
+        ./start-producer.sh
+        ./start-consumer-1.sh
+        ./start-consumer-1.sh
 
 With doing real time analytics you normally have to do a combination of real time processing and reading from stored values. Message Hub can be used as a Kappa Architecture, where there is no traditional data store, only an append-only immutable log.  The idea is that you store the transactions, not the calculated values.
 
