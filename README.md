@@ -1,10 +1,12 @@
 # Message Hub Example Code
 
-## Message Hub
-IBM Message Hub is a Bluemix managed instance of Apache Kafka, a massively scalable message queue architected as a distributed transaction log. Kafka was originally developed at LinkedIn before being open sourced. Used by Walmat, Netflix, Uber and Betfair
+
+IBM Message Hub is a Bluemix managed instance of Apache Kafka, a massively scalable message queue architected as a distributed transaction log. Kafka was originally developed at LinkedIn before being open sourced. Used by Walmat, Netflix, Uber and Betfair. In most cases, Message Hub can be used as if it is a Kafka Queue.
 
 A new Message Hub instance can be created using the Bluemix dashboard.
 
+
+## Message Hub Terminology
 ![alt text](readme-images/message-hub-arch.png "Message Hub Architecture")
 
 
@@ -30,6 +32,7 @@ Consumer groups organise consumer instances into groups. Grouping consumers allo
 
 ## Example Code
 The Java code shows how to send and receive messages from Messgae Hub using the Apache Kafka libraries.  
+
 
 ### Producer.java
 Producer.java creates a Kafka producer and adds a message on to Message Hub every second.
@@ -83,7 +86,7 @@ The example code uses two configuration files.
 
 Kafka properties for both consumers and producers is in *resouces/kafka.properties* including the name of the topic to use (cscc.topic).  All the consumers and producers in the examples use this configuration file.
 
-Only one producer is used in this example.  Its configuration can be set by copying *local-producer.env.template* to *local-producer.env* nad filling in the Message Hub username and password taken from the Bluemix dashboard.
+Only one producer is used in this example.  Its configuration can be set by copying *local-producer.env.template* to *local-producer.env* and filling in the Message Hub username and password taken from the Bluemix dashboard.
 
 Two consumers are used in this example.  Their configuration can be set by copying local-consumer-1.env.template to local-consumer-1.env and local-consumer-2.env.template to local-consumer-2.env and filling in the Message Hub username and password taken from the Bluemix dashboard.  The consumer properties files allow the consumer group to be set, this will be changed depending on how Message Hub is being used (see below).
 
@@ -148,7 +151,9 @@ In message hub you can reset the position in the log that you start processing f
 
 
 ## References
-https://en.wikipedia.org/wiki/Apache_Kafka
-http://techblog.netflix.com/2016/04/kafka-inside-keystone-pipeline.html
-https://eng.uber.com/streamific/
-http://milinda.pathirage.org/kappa-architecture.com/
+* https://developer.ibm.com/messaging/message-hub/
+* http://kafka.apache.org
+* https://en.wikipedia.org/wiki/Apache_Kafka
+* http://techblog.netflix.com/2016/04/kafka-inside-keystone-pipeline.html
+* https://eng.uber.com/streamific/
+* http://milinda.pathirage.org/kappa-architecture.com/
